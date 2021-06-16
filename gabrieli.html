@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	 
+</head>
+<body>
+ <ul>
+<li>
+	<label>რა ღირს მარწყვი?</label>
+	<input type="number" name="" id="a" placeholder="რა ღირს მარწყვი?"></li>
+ 	  
+<li>	 
+	<label> რამდენჯერ ძვირია კივი?</label> 
+ <input type="number" name="" id="b" placeholder="რამდენჯერ ძვირია?"></li>
+ <br>
+<li>
+<label> მარწყვის რამდენი მარაგია მაღაზიაში?</label>	
+	<input type="email" name="" id="c" placeholder="რამდენი მარწყვი?"></li>	 
+<li>
+	<label> კივის რამდენი მარაგია მაღაზიაში?</label>
+	<input type="email" name="" id="d" placeholder="რამდენი კივი?"></li>
+	 
+ </ul>
+ <br>
+ <p> პასუხი:<span id="pasux"></span></p>
+ <button onclick="pasuxi()">შემოწმება</button>
+ <script type="text/javascript">
+
+ 	 
+ 	  
+ 		function pasuxi(){
+
+ 			var a = parseInt (document.getElementById('a').value);
+
+ 	 		var b = parseInt (document.getElementById('b').value);
+
+ 	 		var kivis_fasi = parseInt(a*b);
+
+ 	 		var c = parseInt (document.getElementById('c').value);
+ 	 		var marwyvis_saerto_girebuleba = parseInt (a * c);
+ 	 		var d = parseInt (document.getElementById('d').value);
+ 	 		var kivis_saerto_girebuleba = parseInt (kivis_fasi*d);
+ 	 		var pasuxebisveli = document.getElementById('pasux');
+ 	 		pasuxebisveli.innerHTML = '';
+ 			if(marwyvis_saerto_girebuleba > kivis_saerto_girebuleba){
+ 					 pasuxebisveli.innerHTML = 'მარწყვის მარაგის ჯამური ღირებულება უფრო მეტია';
+ 			} 
+ 			else if  
+ 				(marwyvis_saerto_girebuleba < kivis_saerto_girebuleba){
+ 				pasuxebisveli.innerHTML =	'კივის მარაგის ჯამური ღირებულება უფრო მეტია';
+ 			}  
+ 			  else  (marwyvis_saerto_girebuleba == kivis_saerto_girebuleba)
+ 			  	pasuxebisveli.innerHTML = 'კივის მარაგის ჯამური ღირებულება ერთნაირია';
+ 		}
+ 			
+ 		
+
+
+ </script>
+ 		
+</body>	
+	    
+	  
