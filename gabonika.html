@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.toggleclass{
+	background-color: blue;
+	font-family: sans-serif;
+	font-size: 50px;
+}	
+</style>	
+<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="toggleExample">rick and morty</div>
+	<img src="rick.jpg" style=" width: 500px; " onclick="toggleclass()"style=' cursor : pointer;'>
+	 
+	 
+	<button onclick="masivissheqmna()"style='margin-top:22px ;'>მასივის შექქმნა</button>
+<script type="text/javascript"  >
+	function  masivissheqmna(){
+		var masivi = [];
+		var sigrdze = parseInt(prompt('რამდენი რიცხვის შემოტანა გსურთ'));
+		for (var i = 0 ; i < sigrdze; i++){
+			var el = parseInt(prompt('შეოიტანეთ რიცხვები'));
+			masivi.push(el);
+		}
+		var shuaelementikenti = masivi[(masivi.length - 1) / 2];
+			var shuaelementiluwi = ((masivi[masivi.length / 2 ]) + (masivi[masivi.length / 2 - 1 ])) / 2  ;
+			var kvadratebisjami =(masivi[0])*(masivi[0])+(masivi[masivi.length-1])*(masivi[masivi.length-1]);
+		for(j=0;j<masivi.length;j++){
+			 
+				 
+
+			}
+			 alert('მასივის შუა ელემნტია ' + shuaelementiluwi);
+			 alert('მასივისი შუა ელემენტია '+shuaelementikenti); 
+			alert('თქვენს მიერ შემოტანილი რიცვებიდან პირველი და ბოლო რიცხვების კვადრატების ჯამია-'+kvadratebisjami ) 
+			 
+		}
+		function toggleclass(){
+			var divEL = document.getElementById('toggleExample');
+			divEL.classList.toggle('toggleclass');
+		}
+		
+</script>
+</body>
+</html>
